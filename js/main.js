@@ -20,3 +20,16 @@ const getIdealSleepHours = () => {
   return idealHours * 7;
 }
 
+// CALCULATE THE HOURS
+
+const calculateSleepDebt = () => {
+    let actualSleepHours = getActualSleepHours()
+    let idealSleepHours = getIdealSleepHours()
+    if(actualSleepHours === idealSleepHours) {
+      return `You've got the perfect amount of sleep!`;
+    }else if(actualSleepHours > idealSleepHours) {
+      return `You've got more sleep then needed by ${actualSleepHours - idealSleepHours} hours.`;
+    }else if (actualSleepHours < idealSleepHours) {
+      return `You've got less sleep then needed by ${idealSleepHours - actualSleepHours} hours.`
+    }
+  };
