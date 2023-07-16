@@ -9,3 +9,14 @@ const getSleepHours = day => {
     }
   };
   
+//  THE IDEAL HOURS
+  
+const getActualSleepHours = () =>
+getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday');
+
+
+const getIdealSleepHours = () => {
+  let idealHours = 8;
+  return idealHours * 7;
+}
+
